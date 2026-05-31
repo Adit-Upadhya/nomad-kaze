@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────────────── */
+:root {
+  --fire: #D94F00;
+  --fire2: #A83800;
+  --sand: #E8D5B0;
+  --ink: #141210;
+  --ink2: #1E1A16;
+  --smoke: #4A3F35;
+  --mist: #8C7D6E;
+  --snow: #F2EAD9;
+  --mustang: #3D5A3E;
+  --forest: #0E1410;
+}
+
+/* ─── Reset ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background: var(--ink);
+  color: var(--sand);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── Utilities ─────────────────────────────────────────── */
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--smoke);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fire);
+}
+
+/* ─── Selection ─────────────────────────────────────────── */
+::selection {
+  background: var(--fire);
+  color: var(--snow);
+}

@@ -1,0 +1,44 @@
+.section {
+  padding: 5rem 2.5rem;
+  background: var(--ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+.item {
+  background: var(--ink2);
+  padding: 2rem;
+  border-top: 2px solid rgba(217, 79, 0, 0.18);
+  transition: border-top-color 0.25s, background 0.25s;
+}
+
+.item:hover {
+  border-top-color: var(--fire);
+  background: #221d18;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--snow);
+  margin-bottom: 0.65rem;
+}
+
+.body {
+  font-size: 0.92rem;
+  color: var(--mist);
+  line-height: 1.75;
+  font-style: italic;
+}

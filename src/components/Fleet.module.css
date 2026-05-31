@@ -1,0 +1,54 @@
+.section {
+  background: #0d1210;
+  padding: 5rem 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--ink2);
+  padding: 2rem 1.5rem;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.25s, background 0.25s;
+  cursor: default;
+}
+
+.card:hover {
+  background: #1c1814;
+  border-bottom-color: var(--fire);
+}
+
+.icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--snow);
+}
+
+.type {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fire);
+  margin-top: 0.2rem;
+}
+
+.spec {
+  font-size: 0.9rem;
+  color: var(--mist);
+  margin-top: 0.8rem;
+  line-height: 1.65;
+  font-style: italic;
+}

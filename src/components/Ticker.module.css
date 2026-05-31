@@ -1,0 +1,33 @@
+.ticker {
+  background: var(--fire);
+  padding: 0.75rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.inner {
+  display: inline-block;
+  animation: scroll 32s linear infinite;
+}
+
+.item {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 2.5rem;
+}
+
+.item::before {
+  content: '◆  ';
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

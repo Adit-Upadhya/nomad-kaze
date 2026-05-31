@@ -1,0 +1,140 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(20, 18, 16, 0.92);
+  border-bottom: 1px solid rgba(217, 79, 0, 0.15);
+  transition: background 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.scrolled {
+  background: rgba(20, 18, 16, 0.98);
+  border-bottom-color: rgba(217, 79, 0, 0.3);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 2px;
+}
+
+.logoMain {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--fire);
+}
+
+.logoSub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--mist);
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mist);
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--fire);
+}
+
+.bookBtn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--fire);
+  color: var(--snow);
+  padding: 0.65rem 1.4rem;
+  transition: background 0.2s;
+}
+
+.bookBtn:hover {
+  background: var(--fire2);
+}
+
+/* ─── Hamburger ─────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--sand);
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+.barOpen1 {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barOpen2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.barOpen3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .bookBtn {
+    display: none;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(20, 18, 16, 0.98);
+    padding: 1.5rem 2rem;
+    gap: 1.2rem;
+    border-bottom: 1px solid rgba(217, 79, 0, 0.2);
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .link {
+    font-size: 0.75rem;
+  }
+}

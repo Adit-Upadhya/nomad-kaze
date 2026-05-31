@@ -1,0 +1,45 @@
+.wrap {
+  max-width: 580px;
+}
+
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--fire);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.tag::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--fire);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--snow);
+  line-height: 1.02;
+}
+
+.light {
+  color: var(--snow);
+}
+
+.body {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--mist);
+  line-height: 1.75;
+  margin-top: 0.8rem;
+}
